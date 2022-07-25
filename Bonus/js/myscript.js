@@ -13,5 +13,14 @@ console.log('Bonus');
 
 const numeri = [5, 35, 44, 242, 44, 65, 83, 64, 33, 85, 69, 453, 785, 124, 98];
 console.log(numeri);
+const square = document.getElementById('square')
+square.innerHTML = '';
 
-for(i=numeri.length;)
+for (let i = numeri.length - 1; i > numeri.length - 6; i--) {
+    const divElement = document.createElement('div');
+    let number = numeri[i];
+    divElement.classList.add('cell');
+    console.log(numeri[i]);
+    divElement.append(number);
+    square.append(divElement);
+}

@@ -6,8 +6,8 @@
 console.log('Esercizio dei dadi');
 
 const lancia = document.getElementById('lancia');
-const risultato=document.getElementById('risultato');
-const sfondo= document.getElementById('sfondo');
+const risultato = document.getElementById('risultato');
+const sfondo = document.getElementById('sfondo');
 
 
 lancia.addEventListener('click', function () {
@@ -19,20 +19,19 @@ lancia.addEventListener('click', function () {
 
     if (giocatore > computer) {
         console.log('hai vintoooo');
-        risultato.innerHTML='Vittoriaaaaa!!!';
-        sfondo.classList.remove('sconfitta', 'pareggio');
-        sfondo.classList.add('vittoria');
+        risultato.innerHTML = 'Vittoriaaaaa!!!';
+        sfondo.className = 'vittoria';
     } else if (giocatore < computer) {
         console.log('hai perso');
-        risultato.innerHTML='Sconfittaaaaa!!!';
-        sfondo.classList.remove('vittoria', 'pareggio');
-        sfondo.classList.add('sconfitta');
-    }else{
-        console.log ('avete pareggiato');
-        risultato.innerHTML='Pareggioooooo!!!';
-        sfondo.classList.remove('sconfitta', 'vittoria');
-        sfondo.classList.add('pareggio');
+        risultato.innerHTML = 'Sconfittaaaaa!!!';
+        sfondo.className= 'sconfitta';
+    } else {
+        console.log('avete pareggiato');
+        risultato.innerHTML = 'Pareggioooooo!!!';
+        sfondo.className='pareggio';
     }
+
+    risultato.innerHTML += '<br> Tu hai fatto '+giocatore+' Il computer ha fatto '+computer;
 
 
 })
